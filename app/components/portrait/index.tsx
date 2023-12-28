@@ -2,7 +2,7 @@
 "use client"
 import { motion } from "framer-motion"
 
-const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" }
+const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut", }
 
 export default function Portrait() {
   return (

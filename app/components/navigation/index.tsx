@@ -1,4 +1,5 @@
 "use client";
+import { Variants, motion } from "framer-motion";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar/sidebar";
 import { useState } from "react";
@@ -13,8 +14,10 @@ const Navigation = () => {
   };
   return (
     <>
+   <motion.nav >
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar  toggle={toggle} />
+    </motion.nav>
     </>
   );
 };

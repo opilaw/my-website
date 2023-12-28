@@ -5,11 +5,19 @@ import Image from 'next/image';
 import { useState } from "react";
 
 import Logo from '@/public/logo.png'
+import { Variants, motion } from "framer-motion";
+const itemVariants: Variants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 }
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+};
 
+const Navbar = ({toggle}: {toggle: ()=>void; }) => {
 
-const Navbar = ({toggle}: {toggle: ()=>void}) => {
-
-
+  
   
   return (
     <>
@@ -38,13 +46,27 @@ const Navbar = ({toggle}: {toggle: ()=>void}) => {
                 </Link>
               </li>
             </ul>
-            <button
+            
+          
+            <motion.button
+            whileTap={{scale:0.97}}
               type="button"
               className="inline-flex items-center md:hidden"
               onClick={toggle}
             >
+                <motion.div
+          variants={{
+            open: { rotate: 180 },
+            closed: { rotate: 0 }
+          }}
+          transition={{ duration: 0.2 }}
+          style={{ originY: 0.55 }}
+        >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="40px" height="40px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
-            </button>
+              </motion.div>
+            </motion.button>
+
+           
           </div>
         </div>
       </div>
