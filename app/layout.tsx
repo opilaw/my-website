@@ -3,8 +3,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from "./components/navigation";
+import { Roboto_Slab } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto_Slab({subsets: ['latin'], weight: ['300']})
 
 export const metadata: Metadata = {
   title: 'My website',
@@ -18,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Navigation  />
         {children}
         

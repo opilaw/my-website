@@ -14,7 +14,7 @@ const Navigation = () => {
   };
   return (
     <>
-   <motion.nav >
+   <motion.nav className="bg-white sticky top-0 shadow-sm">
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar  toggle={toggle} />
     </motion.nav>
