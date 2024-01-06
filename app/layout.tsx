@@ -3,10 +3,13 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from "./components/navigation";
+import Footer from './components/footer'
 import { Roboto_Slab } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto_Slab({subsets: ['latin'], weight: ['300']})
+
+const roboto = Roboto_Slab({subsets: ['latin'], weight: ['300', '400', '600', '800']})
+
+
 
 export const metadata: Metadata = {
   title: 'My website',
@@ -23,7 +26,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Navigation  />
         {children}
-        
+        <Footer />
         </body>
     </html>
   )

@@ -31,20 +31,36 @@ const Navbar = ({toggle}: {toggle: ()=>void; }) => {
       </Link>
             <ul className="hidden md:flex gap-x-6 text-black">
               <li>
+              <motion.div
+      className="box"
+      whileHover={{ scale: 1.1, fontWeight: '600' }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+    
                 <Link href="/resume">
                   <p >Resume</p>
                 </Link>
+                </motion.div>
               </li>
               <li>
+              <motion.div
+      className="box"
+      whileHover={{ scale: 1.1, fontWeight: '600' }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                 <Link href="/articles">
                   <p>Research Papers and Articles</p>
                 </Link>
+                </motion.div>
               </li>
+              <motion.div
+      className="box"
+      whileHover={{ scale: 1.1, fontWeight: '600' }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}>
               <li>
                 <Link href="/artwork">
                   <p>My artwork</p>
                 </Link>
               </li>
+                </motion.div>
             </ul>
             
           

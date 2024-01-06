@@ -8,7 +8,7 @@ export default function Portrait() {
   return (
     <>
 
-    <motion.svg className="max-w-lg max-h-max 2xl:max-h-full 2xl:max-w-full 2xl:static" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+    <motion.svg className="max-w-lg max-h-max 2xl:max-h-full 2xl:max-w-full 2xl:static 2xl:w-5/12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	 width="100%" height="100%" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" >
 <motion.path fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.000000"  initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
